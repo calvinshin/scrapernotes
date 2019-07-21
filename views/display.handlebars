@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>
+        Board Game Reviews
+    </h1>
+    <p>
+        Quick comments on each game
+    </p>
+    <div class="row">
+        <div class="col-9">
+            {{#each game}}
+            <div class="row">
+                <div class="col-3">
+                    <img src="{{this.image}}" class="gameImage">
+                </div>
+                <div class="col-9">
+                    {{!-- <a href="https://boardgamegeek.com/ + {{this.link}}"> --}}
+                        {{this.name}}
+                    {{!-- </a> --}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="col-3">
+            {{!-- Where comments will go --}}
+        </div>
+    </div>
+</div>

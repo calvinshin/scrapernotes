@@ -9,6 +9,9 @@ var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 3000;
 var app = express();
 
+// module.exports = db;
+// var db = require("./server/server")
+
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 

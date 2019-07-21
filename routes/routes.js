@@ -5,12 +5,25 @@ var library = require("../functions/library");
 router = express.Router();
 
 // Shows all valid routes below
+
 router.get("/", function(req, res) {
-    res.send("Hello");
-});
+    res.render("display", {layout: "main"})
+})
 
 router.get("/hottest", function(req,res) {
-    library.hottest();
+    res.send(library.hottest());
 })
+
+router.get("/games", function(req, res) {
+// First grab the data from the mongo database
+// Then render this into the page.
+    if (res) {
+        library.showgames(res)
+    }    
+})
+
+router.get("*", function(req, res) {
+    res.send("Hello");
+});
 
 module.exports = router;
