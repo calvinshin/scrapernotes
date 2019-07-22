@@ -7,7 +7,9 @@ router = express.Router();
 // Shows all valid routes below
 
 router.get("/", function(req, res) {
-    res.render("display", {layout: "main"})
+    if (res) {
+        library.showgames(res)
+    }   
 })
 
 router.get("/hottest", function(req,res) {
