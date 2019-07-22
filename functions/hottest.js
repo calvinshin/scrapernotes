@@ -28,9 +28,9 @@ var hottest = function() {
                 }
                 else {
                     db.Game.create(data)
-                    .then(function(dbArticle) {
+                    .then(function(dbGame) {
                       // View the added result in the console
-                      console.log("Success, added: ", dbArticle);
+                      console.log("Success, added: ", dbGame);
                     })
                     .catch(function(err) {
                       // If an error occurred, log it

@@ -20,8 +20,12 @@ router.get("/games", function(req, res) {
 // First grab the data from the mongo database
 // Then render this into the page.
     if (res) {
-        library.showgames(res)
+        library.showgames(res);
     }    
+})
+
+router.get("/games/:id", function(req, res) {
+    library.gameFind(req, res);
 })
 
 router.get("*", function(req, res) {

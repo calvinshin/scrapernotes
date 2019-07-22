@@ -1,4 +1,4 @@
-db = require("../server/db")
+db = require("../server/db");
 
 showgames = function(res) {db.Game.find({})
     .then(function(dbGame) {
@@ -9,4 +9,4 @@ showgames = function(res) {db.Game.find({})
     });
 }
 
-module.exports = showgames
+module.exports = showgames;
