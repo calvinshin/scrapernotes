@@ -1,6 +1,7 @@
 // Mongo initialize
 var mongoose = require("mongoose");
 var db = require("../models");
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/scrapernotes', {useNewUrlParser: true});
+MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/scrapernotes'
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 module.exports = db;
